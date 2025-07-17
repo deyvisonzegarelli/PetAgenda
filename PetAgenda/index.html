@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>PetAgenda</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🐾 PetAgenda</h1>
+  </header>
+
+  <main>
+    <form id="agendamentoForm">
+      <label>Data:
+        <input type="date" id="data" required>
+      </label>
+      <label>Hora:
+        <input type="time" id="hora" required>
+      </label>
+      <label>Nome do Cãozinho:
+        <input type="text" id="cao" required>
+      </label>
+      <label>Nome do Dono:
+        <input type="text" id="dono" required>
+      </label>
+      <label>Serviço:
+        <select id="servico" required>
+          <option value="">Selecione...</option>
+          <option value="Banho">Banho</option>
+          <option value="Tosa">Tosa</option>
+          <option value="Corte de Unhas">Corte de Unhas</option>
+          <option value="Vacina">Vacina</option>
+        </select>
+      </label>
+      <button type="submit">Adicionar Agendamento</button>
+    </form>
+
+    <section id="filtro">
+      <h2>Filtrar Agendamentos</h2>
+      <input type="date" id="filtroData">
+      <button id="btnFiltrar">Filtrar</button>
+    </section>
+
+    <section id="agendamentos">
+      <h2>Fila de Agendamentos</h2>
+
+      <h3>Manhã</h3>
+      <ul id="manha"></ul>
+
+      <h3>Tarde</h3>
+      <ul id="tarde"></ul>
+
+      <h3>Noite</h3>
+      <ul id="noite"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
